@@ -1,15 +1,31 @@
 {
   "name": "Ashok Kumar Mittal",
   "designation": "Advocate",
-  "photo": "",
+  "photo": "/uploads/images/akm-photo.jpg",
   "facts": [
-    { "label": "Enrolment No.", "value": "D/XXXX/YYYY" },
-    { "label": "Bar Council", "value": "Bar Council of Delhi" },
-    { "label": "Year of Enrolment", "value": "YYYY" },
-    { "label": "Practising at", "value": "Courts / Tribunals" }
+    {
+      "label": "Enrolment No.",
+      "value": "D/XXXX/YYYY"
+    },
+    {
+      "label": "Bar Council",
+      "value": "Bar Council of Delhi"
+    },
+    {
+      "label": "Year of Enrolment",
+      "value": "YYYY"
+    },
+    {
+      "label": "Practising at",
+      "value": "Courts / Tribunals"
+    }
   ],
   "about": "Ashok Kumar Mittal is an Advocate enrolled with the Bar Council. Replace this paragraph with a short, factual profile (name, enrolment, years of practice, courts where he appears).",
   "qualifications": [
-    { "degree": "LL.B.", "institution": "University name", "year": "YYYY" }
+    {
+      "degree": "LL.B.",
+      "institution": "University name",
+      "year": "YYYY"
+    }
   ]
 }
