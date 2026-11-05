@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ashok Kumar Mittal, Advocate</title>
+  <meta name="description" content="Ashok Kumar Mittal, Advocate. Information published as permitted under Rule 36, Bar Council of India Rules.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+  <!-- BCI disclaimer gate (shown until visitor agrees) -->
+  <div id="disclaimer" class="gate" role="dialog" aria-modal="true" aria-labelledby="disc-title">
+    <div class="gate-box">
+      <h2 id="disc-title">Disclaimer</h2>
+      <div id="disc-text" class="prose"><p>Loading…</p></div>
+      <div class="gate-actions">
+        <button id="disc-agree" class="btn primary">I Agree</button>
+        <a href="https://www.google.com" class="btn">Exit</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="wrap bar">
+      <a href="#home" class="brand" id="brand">Ashok Kumar Mittal</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">☰</button>
+      <nav id="nav">
+        <a href="#about">About</a>
+        <a href="#practice">Practice Areas</a>
+        <span id="nav-extra"></span>
+        <a href="#documents" id="nav-docs" hidden>Documents</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow" id="p-designation">Advocate</p>
+          <h1 id="p-name">Ashok Kumar Mittal</h1>
+          <dl class="facts" id="p-facts"></dl>
+        </div>
+        <img id="p-photo" class="photo" alt="Ashok Kumar Mittal" hidden>
+      </div>
+    </section>
+
+    <section id="about" class="block">
+      <div class="wrap">
+        <h2>About</h2>
+        <div id="p-about" class="prose"></div>
+        <h3>Qualifications</h3>
+        <div class="table-wrap"><table id="p-quals"></table></div>
+      </div>
+    </section>
+
+    <section id="practice" class="block alt">
+      <div class="wrap">
+        <h2>Practice Areas</h2>
+        <div id="pr-intro" class="prose"></div>
+        <div id="pr-areas" class="cards"></div>
+      </div>
+    </section>
+
+    <div id="custom-sections"></div>
+
+    <section id="documents" class="block" hidden>
+      <div class="wrap">
+        <h2>Documents</h2>
+        <ul id="doc-list" class="docs"></ul>
+      </div>
+    </section>
+
+    <section id="contact" class="block alt">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Contact</h2>
+          <p id="c-address" class="addr"></p>
+          <p><strong>Phone:</strong> <a id="c-phone"></a></p>
+          <p><strong>Email:</strong> <a id="c-email"></a></p>
+          <p id="c-hours"></p>
+        </div>
+        <iframe id="c-map" title="Office location" loading="lazy" hidden></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p id="f-note"></p>
+      <p><a href="#" id="show-disclaimer">Disclaimer</a> · © <span id="year"></span> <span id="f-name">Ashok Kumar Mittal</span></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

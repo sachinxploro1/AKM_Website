@@ -1,0 +1,111 @@
+# Content Manager for AKM website (Sveltia CMS, stores content in GitHub)
+backend:
+  name: github
+  repo: sachinxploro1/AKM_Website
+  branch: main
+  commit_messages:
+    create: "Add {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "Upload “{{path}}”"
+    deleteMedia: "Delete “{{path}}”"
+
+media_folder: uploads
+public_folder: /uploads
+
+collections:
+  - name: pages
+    label: Website Content
+    format: json
+    files:
+      - name: profile
+        label: "Profile & About"
+        file: content/profile.json
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: designation, label: Designation, widget: string, default: Advocate }
+          - { name: photo, label: Photo, widget: image, required: false, media_folder: /uploads/images }
+          - name: facts
+            label: Key Facts (enrolment, bar council, etc.)
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: value, label: Value, widget: string }
+          - { name: about, label: About, widget: markdown }
+          - name: qualifications
+            label: Qualifications (table)
+            widget: list
+            fields:
+              - { name: degree, label: Qualification, widget: string }
+              - { name: institution, label: Institution, widget: string }
+              - { name: year, label: Year, widget: string }
+
+      - name: practice
+        label: Practice Areas
+        file: content/practice.json
+        fields:
+          - { name: intro, label: Intro, widget: markdown, required: false }
+          - name: areas
+            label: Areas
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Short description, widget: text }
+
+      - name: sections
+        label: Extra Sections
+        file: content/sections.json
+        fields:
+          - name: sections
+            label: Sections
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Section title, widget: string }
+              - { name: visible, label: Show on website, widget: boolean, default: true }
+              - { name: show_in_menu, label: Show in top menu, widget: boolean, default: false }
+              - { name: body, label: Text, widget: markdown, required: false }
+              - name: table
+                label: Table (optional)
+                widget: object
+                required: false
+                fields:
+                  - { name: columns, label: Column headings, widget: list, field: { name: column, label: Heading, widget: string } }
+                  - name: rows
+                    label: Rows
+                    widget: list
+                    fields:
+                      - { name: cells, label: Cells (one per column, in order), widget: list, field: { name: cell, label: Cell, widget: string } }
+              - { name: file, label: Attach file (optional), widget: file, required: false, media_folder: /uploads/docs }
+              - { name: file_label, label: Link text for file, widget: string, required: false }
+
+      - name: documents
+        label: Documents (uploads)
+        file: content/documents.json
+        fields:
+          - name: documents
+            label: Documents
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: file, label: File (PDF etc.), widget: file, media_folder: /uploads/docs }
+              - { name: date, label: Date, widget: string, required: false }
+              - { name: description, label: Description, widget: text, required: false }
+
+      - name: contact
+        label: Contact
+        file: content/contact.json
+        fields:
+          - { name: address, label: Address, widget: text }
+          - { name: phone, label: Phone, widget: string }
+          - { name: email, label: Email, widget: string }
+          - { name: hours, label: Office hours, widget: string, required: false }
+          - { name: map_embed_url, label: Google Maps embed link (optional), widget: string, required: false }
+
+      - name: settings
+        label: Disclaimer & Footer
+        file: content/settings.json
+        fields:
+          - { name: disclaimer, label: Disclaimer (BCI), widget: markdown }
+          - { name: footer_note, label: Footer note, widget: text }

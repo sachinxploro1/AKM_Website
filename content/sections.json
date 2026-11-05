@@ -1,0 +1,19 @@
+{
+  "sections": [
+    {
+      "title": "Courts & Forums",
+      "visible": true,
+      "show_in_menu": false,
+      "body": "Courts and forums where the advocate appears:",
+      "table": {
+        "columns": ["Court / Forum", "Location"],
+        "rows": [
+          { "cells": ["High Court", "City"] },
+          { "cells": ["District Courts", "City"] }
+        ]
+      },
+      "file": "",
+      "file_label": ""
+    }
+  ]
+}

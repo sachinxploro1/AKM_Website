@@ -1,0 +1,8 @@
+{
+  "intro": "Areas of practice:",
+  "areas": [
+    { "title": "Civil Law", "description": "Suits, recovery, injunctions and property matters." },
+    { "title": "Criminal Law", "description": "Bail, trials and appeals." },
+    { "title": "Corporate & Commercial", "description": "Contracts, agreements and commercial disputes." }
+  ]
+}
